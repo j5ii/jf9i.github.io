@@ -1,91 +1,618 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<title>PPRO installer slideshow</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/styles.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="إكسسوارات ميليس - Melis Aksesuar">
+<title>إكسسوارات ميليس | Melis Aksesuar</title>
+
 <style>
-html {
-		background-color: #fff;
+:root {
+  --primary: #98617b;
+  --dark: #332b32;
+  --muted: #827780;
+  --background: #faf8f9;
+  --border: #eee5e9;
 }
-* {box-sizing: border-box;}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-	margin:0px;}
-.mySlides {opacity: 0; position: absolute; transition: all 1s;}
-img {vertical-align: middle;}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 445px;
-  position: relative;
-  margin: auto;
-  cursor: pointer;
+  margin: 0;
+  background: var(--background);
+  color: var(--dark);
+  font-family: Tahoma, Arial, sans-serif;
+  line-height: 1.8;
 }
 
-/* Caption text */
-.text {
-  font-family: 'AdobeClean', Helvetica, Arial, sans-serif;
-  color: #fff;
-  font-weight: 450;
+.container {
+  width: 92%;
+  max-width: 900px;
+  margin: auto;
+}
+
+header {
+  background: white;
+  border-bottom: 1px solid var(--border);
+  padding: 18px 0;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.brand {
+  color: var(--primary);
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.brand small {
+  display: block;
+  font-size: 12px;
+  font-weight: normal;
+  color: var(--muted);
+  direction: ltr;
+  text-align: right;
+}
+
+header a {
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.hero {
+  background: white;
+  text-align: center;
+  padding: 65px 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.symbol {
+  width: 67px;
+  height: 67px;
+  margin: 0 auto 22px;
+  border-radius: 50%;
+  background: #f6eaf0;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+  font-weight: bold;
+}
+
+.hero h1 {
+  font-size: clamp(30px, 6vw, 46px);
+  margin: 0;
+  font-weight: bold;
+}
+
+.hero .latin {
+  direction: ltr;
+  color: var(--primary);
+  font-size: 27px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.hero .short {
+  margin-top: 12px;
+  color: var(--muted);
   font-size: 15px;
-  letter-spacing: .3;
-  padding-left: 20px;
-  position: absolute;
-  bottom: 95px;
-  width: 30%;
+}
+
+.hero p {
+  max-width: 560px;
+  margin: 24px auto;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.tags {
+  display: flex;
+  justify-content: center;
+  gap: 9px;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+.tags span {
+  padding: 6px 17px;
+  border-radius: 25px;
+  background: #f9eef3;
+  color: var(--primary);
+  font-size: 13px;
+}
+
+main {
+  padding: 35px 0;
+}
+
+.box {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 22px;
+}
+
+.box h2 {
+  margin: 0;
+  padding: 15px 20px;
+  background: #fcf4f7;
+  border-right: 4px solid var(--primary);
+  font-size: 19px;
+}
+
+.box-content {
+  padding: 10px 22px;
+}
+
+.name-showcase {
+  padding: 35px 15px;
   text-align: center;
 }
 
-/* Number text (1/3 etc) */
-.numbertext {
-	font-family: 'AdobeClean', Helvetica, Arial, sans-serif;
-  color: #f2f2f2;
+.name-showcase .style-one {
+  font-size: 31px;
+  font-weight: bold;
+}
+
+.name-showcase .style-two {
+  color: var(--primary);
+  font-size: 25px;
+  font-weight: bold;
+  direction: ltr;
+}
+
+.name-showcase .style-three {
+  font-size: 17px;
+  color: var(--muted);
+  margin-top: 15px;
+}
+
+.name-showcase .style-four {
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: var(--primary);
+  direction: ltr;
+  margin-top: 8px;
+}
+
+.divider {
+  width: 55px;
+  height: 2px;
+  background: var(--primary);
+  margin: 20px auto;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 13px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.row:last-child {
+  border-bottom: 0;
+}
+
+.label {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.value {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+.value a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.status {
+  color: #238157;
+}
+
+.contact {
+  text-align: center;
+  padding: 38px 20px;
+  background: var(--primary);
+  color: white;
+  border-radius: 12px;
+}
+
+.contact h2 {
+  margin: 0;
+  font-size: 25px;
+}
+
+.contact .latin {
+  direction: ltr;
+  margin-top: 5px;
+  font-size: 18px;
+}
+
+.contact p {
+  font-size: 14px;
+  margin: 20px 0;
+}
+
+.contact a {
+  display: inline-block;
+  background: white;
+  color: var(--primary);
+  text-decoration: none;
+  padding: 10px 22px;
+  border-radius: 7px;
+  margin: 6px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.note {
+  text-align: center;
+  color: var(--muted);
   font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
+  padding: 22px 10px;
 }
 
-.active {
-  background-color: #717171;
+footer {
+  background: white;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  padding: 35px 15px;
 }
 
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1s;
-  animation-name: fade;
-  animation-duration: 1s;
+footer .arabic {
+  font-size: 25px;
+  font-weight: bold;
 }
 
-@-webkit-keyframes fade {
-  from {opacity: .7}
-  to {opacity: 1}
+footer .latin {
+  color: var(--primary);
+  font-size: 20px;
+  font-weight: bold;
+  direction: ltr;
 }
 
-@keyframes fade {
-  from {opacity: .1}
-  to {opacity: 1}
+footer .small {
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 15px;
 }
 
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
+@media(max-width:600px) {
+  .hero {
+    padding: 45px 15px;
+  }
+
+  .hero .latin {
+    font-size: 23px;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .value {
+    text-align: right;
+  }
+
+  .box-content {
+    padding: 10px 16px;
+  }
+
+  .contact a {
+    display: block;
+    max-width: 280px;
+    margin: 10px auto;
+  }
 }
 </style>
 </head>
+
 <body>
-<div class="slideshow-container" id="slideContainer" href="#">
 
-<div class="mySlides fade" style="opacity: 1; visibility: visible;">
-    <video class="videos" autoplay loop muted style="width: 445px; height: 239px;"><source src="images/01_creativity_for_all_445x239.mp4" style="width: 445px; height: 239px;"></video>
-    <div class="text" id="slideText1">Creativity for all.</div>
+<header>
+  <div class="container header-content">
+    <div class="brand">
+      إكسسوارات ميليس
+      <small>Melis Aksesuar</small>
+    </div>
+    <a href="#contact">تواصل معنا</a>
+  </div>
+</header>
+
+<section class="hero">
+
+  <div class="symbol">M</div>
+
+  <h1>إكسسوارات ميليس</h1>
+
+  <div class="latin">
+    Melis Aksesuar
+  </div>
+
+  <div class="short">
+    ميليس | MELIS
+  </div>
+
+  <p>
+    مرحبًا بكم في إكسسوارات ميليس.
+    تعرفوا على نشاطنا التجاري
+    ومعلومات الشركة وطرق التواصل معنا.
+  </p>
+
+  <div class="tags">
+    <span>إكسسوارات ميليس</span>
+    <span>Melis Aksesuar</span>
+    <span>ميليس</span>
+    <span>MELIS</span>
+  </div>
+
+</section>
+
+<main class="container">
+
+<!-- Company Name -->
+
+<section class="box">
+
+  <h2>اسم الشركة | Company Name</h2>
+
+  <div class="name-showcase">
+
+    <div class="style-one">
+      إكسسوارات ميليس
+    </div>
+
+    <div class="style-two">
+      Melis Aksesuar
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="style-three">
+      ميليس للإكسسوارات
+    </div>
+
+    <div class="style-four">
+      MELIS AKSESUAR
+    </div>
+
+    <div class="style-three">
+      ميليس | Melis
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Business Information -->
+
+<section class="box">
+
+  <h2>معلومات الشركة</h2>
+
+  <div class="box-content">
+
+    <div class="row">
+      <span class="label">الاسم التجاري</span>
+      <span class="value">Melis Aksesuar</span>
+    </div>
+
+    <div class="row">
+      <span class="label">الاسم بالعربية</span>
+      <span class="value">إكسسوارات ميليس</span>
+    </div>
+
+    <div class="row">
+      <span class="label">رقم السجل التجاري</span>
+      <span class="value">1867910</span>
+    </div>
+
+    <div class="row">
+      <span class="label">الشكل القانوني</span>
+      <span class="value">من الشركات الكبرى</span>
+    </div>
+
+    <div class="row">
+      <span class="label">حالة السجل حسب المستند</span>
+      <span class="value status">نشط - Active</span>
+    </div>
+
+    <div class="row">
+      <span class="label">تاريخ التسجيل</span>
+      <span class="value">2023/08/20</span>
+    </div>
+
+    <div class="row">
+      <span class="label">استثمار أجنبي</span>
+      <span class="value">نعم - Yes</span>
+    </div>
+
+    <div class="row">
+      <span class="label">تاريخ الانتهاء</span>
+      <span class="value">11/12/2028</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- License Information -->
+
+<section class="box">
+
+  <h2>معلومات النشاط التجاري</h2>
+
+  <div class="box-content">
+
+    <div class="row">
+      <span class="label">رقم الترخيص</span>
+      <span class="value">L2888610</span>
+    </div>
+
+    <div class="row">
+      <span class="label">تعريف الترخيص</span>
+      <span class="value">LD-1883</span>
+    </div>
+
+    <div class="row">
+      <span class="label">النشاط</span>
+      <span class="value">
+        خدمات الترويج والتسويق
+        على المواقع الإلكترونية
+        ووسائل التواصل الاجتماعي
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">مدة الترخيص</span>
+      <span class="value">12 شهرًا</span>
+    </div>
+
+    <div class="row">
+      <span class="label">الإصدار الأول</span>
+      <span class="value">25/06/2023</span>
+    </div>
+
+    <div class="row">
+      <span class="label">تاريخ الإصدار</span>
+      <span class="value">2024/08/20</span>
+    </div>
+
+    <div class="row">
+      <span class="label">تاريخ الانتهاء</span>
+      <span class="value">11/12/2028</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- Contact Information -->
+
+<section class="box">
+
+  <h2>معلومات التواصل</h2>
+
+  <div class="box-content">
+
+    <div class="row">
+      <span class="label">رقم الهاتف</span>
+      <span class="value">
+        <a href="tel:+966599212060">
+          +966599212060
+        </a>
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">البريد الإلكتروني</span>
+      <span class="value">
+        <a href="mailto:Ot@jf9i.github.io">
+          Ot@jf9i.github.io
+        </a>
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">الموقع الإلكتروني</span>
+      <span class="value">
+        <a href="https://jf9i.github.io"
+           target="_blank"
+           rel="noopener noreferrer">
+          jf9i.github.io
+        </a>
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">العنوان</span>
+      <span class="value">
+        طريق الملك سلمان،
+        العليا، الرياض،
+        11345،
+        المملكة العربية السعودية
+      </span>
+    </div>
+
+  </div>
+</section>
+
+<!-- Contact Section -->
+
+<section class="contact" id="contact">
+
+  <h2>تواصل مع إكسسوارات ميليس</h2>
+
+  <div class="latin">
+    Melis Aksesuar
+  </div>
+
+  <p>
+    يسعدنا استقبال استفساراتكم
+    والتواصل معكم.
+  </p>
+
+  <a href="tel:+966599212060">
+    اتصال هاتفي
+  </a>
+
+  <a href="mailto:Ot@jf9i.github.io">
+    البريد الإلكتروني
+  </a>
+
+  <a href="https://wa.me/966599212060"
+     target="_blank"
+     rel="noopener noreferrer">
+    واتساب
+  </a>
+
+</section>
+
+<div class="note">
+  المعلومات الواردة في هذه الصفحة
+  مستمدة من المستند المرفق.
+  الصفحة تعريفية وليست شهادة حكومية
+  أو وسيلة رسمية للتحقق من الترخيص.
 </div>
 
-</div>
+</main>
 
-<script type="text/javascript" src="lib/jquery.min.js"></script>
-<script type="text/javascript" src="carousel.js"></script>
+<footer>
+
+  <div class="arabic">
+    إكسسوارات ميليس
+  </div>
+
+  <div class="latin">
+    Melis Aksesuar
+  </div>
+
+  <div class="small">
+    ميليس | MELIS
+    <br>
+    © 2026 Melis Aksesuar
+    <br>
+    jf9i.github.io
+  </div>
+
+</footer>
+
 </body>
 </html>
